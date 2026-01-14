@@ -24,12 +24,18 @@ print(f"The sum of the numbers is: {sum}")
 print(f"The product of the numbers is: {product}")
 print(f"The average of the numbers is: {average}")
 #6 Write a program that asks the user to enter a mass in medieval units: talents, pounds, and lots. The program converts the input to full kilograms and grams and outputs the result to the user:
-talents = int(input("Enter the number of talents: "))
-pounds = int(input("Enter the number of pounds: "))
-lots = int(input("Enter the number of lots: "))
+talents = float(input("Enter the number of talents: "))
+pounds = float(input("Enter the number of pounds: "))
+lots = float(input("Enter the number of lots: "))
 pounds = talents*20 + pounds
 grams = lots *13.3  
 total_grams = pounds * 32 + grams
 kilograms = total_grams // 1000
 remaining_grams = total_grams % 1000
 print(f"The mass is {kilograms} kilograms and {remaining_grams} grams.")
+#7 Write a program that draws two random combinations of numbers for a combination lock 
+import random
+code_3_digit = [random.randint(0, 9) for _ in range(3)]
+code_4_digit = [random.randint(1, 6) for _ in range(4)]
+print("3-digit lock code (0–9):", code_3_digit)
+print("4-digit lock code (1–6):", code_4_digit)
