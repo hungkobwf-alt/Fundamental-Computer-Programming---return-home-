@@ -5,19 +5,17 @@ class Car:
     def __init__(self, registration_number, max_speed):
         self.registration_number = registration_number
         self.max_speed = max_speed
-        self.current_speed = 0       # Automatically starts at 0
-        self.travelled_distance = 0  # Automatically starts at 0
+        self.current_speed = 0      
+        self.travelled_distance = 0  
 
     # Task 2:The accelerate Mthod
     def accelerate(self, change_in_speed):
 
         self.current_speed = self.current_speed + change_in_speed
-        
-        # Make sure we don't go over the maximum speed
+
         if self.current_speed > self.max_speed:
             self.current_speed = self.max_speed
-            
-        # Make sure the speed doesn't drop below zero
+
         if self.current_speed < 0:
             self.current_speed = 0
 
@@ -45,21 +43,19 @@ if __name__ == "__main__":
     while race_is_finished == False:
         
         for car in cars_list:
-            # Change speed randomly between -10 and +15
             speed_change = random.randint(-10, 15)
             car.accelerate(speed_change)
-            
-            # Drive for 1 hour
+
             car.drive(1)
             
        
             if car.travelled_distance >= 10000:
                 race_is_finished = True
 
-    print("---------------------------------------------------------")
+    print("No sung bat dau cuoc dua")
     print(f"{'Reg Number':<12} | {'Max Speed':<10} | {'Current Speed':<15} | {'Distance'}")
-    print("---------------------------------------------------------")
+    print("Bang thong so")
     
     for car in cars_list:
         print(f"{car.registration_number:<12} | {car.max_speed:<6} km/h | {car.current_speed:<9} km/h | {car.travelled_distance} km")
-    print("---------------------------------------------------------")
+    print("Het cuoc dua")
