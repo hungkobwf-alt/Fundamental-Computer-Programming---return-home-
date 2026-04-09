@@ -58,7 +58,7 @@ def main():
 if __name__ == "__main__":
     main()
 #5
-# --- Function Definition ---def remove_uneven_numbers(number_list):
+def remove_uneven_numbers(number_list):
     """Takes a list of integers and returns a new list with only the even numbers."""
     even_list = []
     
